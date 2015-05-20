@@ -35,7 +35,10 @@ var _ = {
   
 
   // Help
-  help : function() {
+  help : function(name) {
     console.log("I need somebody")
+    if (name !== undefined){
+      console.log("but not just anybody")
+    }
   };
 };
