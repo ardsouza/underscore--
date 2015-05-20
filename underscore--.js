@@ -1,5 +1,6 @@
 // Create an unsafe reference to the Underscore object for use by all.
 var _ = {
+
   // Does nothing
   doNothing : function() {
 
@@ -26,7 +27,12 @@ var _ = {
     return 6;
   }
 
-  //
+  // For when you hate that function
+  callNever : function(func) {
+
+  }
+
+  
 
   // Help
   help : function() {
