@@ -32,8 +32,6 @@ var _ = {
 
   }
 
-  
-
   // Help
   help : function(name) {
     console.log("I need somebody")
@@ -41,4 +39,13 @@ var _ = {
       console.log("but not just anybody")
     }
   };
+
+  //
+  baseOne: function(number) {
+    var str = "";
+    if (number === 0) return 0;
+    if (number < 0) str += "-"
+    for (var i = 0; i < Math.abs(number); i++) str += "1";
+    return parseInt(str);
+  }
 };
