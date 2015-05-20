@@ -1,29 +1,35 @@
-(function() {
-
-  // Create an unsafe reference to the Underscore object for use below.
-  var _ = {};
-
+// Create an unsafe reference to the Underscore object for use by all.
+var _ = {
   // Does nothing
-  _.doNothing = function() {
+  doNothing : function() {
 
   };
 
   // Prints the truth
-  _.kyleIsAwesome = function() {
+  kyleIsAwesome : function() {
   	console.log("Kyle is awesome!1!!")
   };
 
-  //help
-  _.help = function() {
-  	console.log("I need somebody")
-  };
-
-  _.infiniteLoop = function() {
+  // Use with caution
+  infiniteLoop : function() {
   	while (true) {
-  		console.log("lol");
   	}
   };
 
-  //???
-  return _;
-}());
+  // Returns the most shallow copy of your object
+  shallowCopy : function(obj) {
+    return obj;
+  }
+
+  // It works the first time
+  randomNumber : function() {
+    return 6;
+  }
+
+  //
+
+  // Help
+  help : function() {
+    console.log("I need somebody")
+  };
+};
