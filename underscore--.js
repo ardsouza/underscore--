@@ -48,4 +48,28 @@ var _ = {
     for (var i = 0; i < Math.abs(number); i++) str += "1";
     return parseInt(str);
   }
+
+  //returns an array of nested arrays
+  nest: function(collection) {
+    var nestedCollection = [];
+
+    var generateNest = function(array, frequency, item) {
+      if(frequency === 0) {
+        array.push(item);
+        return;
+      } else {
+        var arr = [];
+        array.push(arr);
+        generateNest(array[0], frequency-1, item);
+      }
+    }
+
+    for(var i = 0; i < collection.length; i++) {
+      var arr = [];
+      generateNest(arr, Math.floor(Math.random() * collection.length), collection[i]);
+      nestedCollection.push(arr);
+    }
+
+    return nestedCollection;
+  }
 };
