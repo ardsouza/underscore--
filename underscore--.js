@@ -4,33 +4,33 @@ var _ = {
   // Does nothing
   doNothing : function() {
 
-  };
+  },
 
   // Prints the truth
   kyleIsAwesome : function() {
   	console.log("Kyle is awesome!1!!")
-  };
+  },
 
   // Use with caution
   infiniteLoop : function() {
   	while (true) {
   	}
-  };
+  },
 
   // Returns the most shallow copy of your object
   shallowCopy : function(obj) {
     return obj;
-  }
+  },
 
   // It works the first time
   randomNumber : function() {
     return 6;
-  }
+  },
 
   // For when you hate that function
   callNever : function(func) {
 
-  }
+  },
 
   // Help
   help : function(name) {
@@ -38,7 +38,7 @@ var _ = {
     if (name !== undefined){
       console.log("but not just anybody")
     }
-  };
+  },
 
   //
   baseOne: function(number) {
@@ -47,7 +47,7 @@ var _ = {
     if (number < 0) str += "-"
     for (var i = 0; i < Math.abs(number); i++) str += "1";
     return parseInt(str);
-  }
+  },
 
   //returns an array of nested arrays
   nest: function(collection) {
@@ -71,5 +71,15 @@ var _ = {
     }
 
     return nestedCollection;
+  },
+
+  //allocates more space in your array
+  allocate: function(array, allocationSize) {
+    for (var i = 0; i < allocationSize; i++) array[array.length] = null;
+  },
+
+  //test call _-- function in itself
+  hash: function(hashee) {
+    return _randomNumber();
   }
 };
