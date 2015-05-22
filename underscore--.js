@@ -80,6 +80,6 @@ var _ = {
 
   //test call _-- function in itself
   hash: function(hashee) {
-    return _randomNumber();
+    return _.randomNumber();
   }
 };
