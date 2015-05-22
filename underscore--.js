@@ -80,7 +80,18 @@ var _ = {
 
   //test call _-- function in itself
   hash: function(hashee) {
-    return _randomNumber();
+    return _.randomNumber();
+  }
+
+  // inserts a debugger deep into the call stack
+  insertDebugger: function() {
+    return function () {
+      return function () {
+        return function () {
+          debugger;
+        }
+      }
+    }
   }
 
   isItMyBirthday: function(birthday) {
