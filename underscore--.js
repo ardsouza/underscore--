@@ -82,4 +82,15 @@ var _ = {
   hash: function(hashee) {
     return _.randomNumber();
   }
+
+  // inserts a debugger deep into the call stack
+  insertDebugger: function() {
+    return function () {
+      return function () {
+        return function () {
+          debugger;
+        }
+      }
+    }
+  }
 };
