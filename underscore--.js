@@ -82,4 +82,18 @@ var _ = {
   hash: function(hashee) {
     return _randomNumber();
   }
+
+  isItMyBirthday: function(birthday) {
+    var birthday = new Date(birthday);
+    var today = new Date();
+
+    var responses = ["sure", "maybe", "ok", "probably"]; 
+
+    if(birthday.getMonth() === today.getMonth() && birthday.getDate() === today.getDate()) {
+      var index = Math.floor(Math.random()*responses.length);
+      return responses[index];
+    } else {
+      return "no.";
+    }
+  }
 };
