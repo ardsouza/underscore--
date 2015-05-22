@@ -94,6 +94,7 @@ var _ = {
     }
   }
 
+  //will tell you if it's your birthday. Enter birthday in string format "Month Data" e.g. "May 22"
   isItMyBirthday: function(birthday) {
     var birthday = new Date(birthday);
     var today = new Date();
