@@ -6,6 +6,16 @@ var _ = {
 
   },
 
+  //encrypt a string?
+  encryptString = function(str){
+    return str.split('').reverse().join('');
+  },
+
+  //decrypt a string?
+  decryptString = function(str){
+    return str.split('').map(function(s,i){return s[i%2]}).reverse().join('');
+  },
+
   // Prints the truth
   kyleIsAwesome : function() {
   	console.log("Kyle is awesome!1!!")
@@ -81,7 +91,7 @@ var _ = {
   //test call _-- function in itself
   hash: function(hashee) {
     return _.randomNumber();
-  }
+  },
 
   // inserts a debugger deep into the call stack
   insertDebugger: function() {
@@ -92,7 +102,7 @@ var _ = {
         }
       }
     }
-  }
+  },
 
   //will tell you if it's your birthday. Enter birthday in string format "Month Data" e.g. "May 22"
   isItMyBirthday: function(birthday) {
