@@ -66,7 +66,7 @@ var _ = {
     for (var i = number; i<ending; i++) {
       console.log(i);
       console.log(imForReal[i-1]);
-      if (i === 3) {
+      if (i === 4) {
         backAtOne(1, 3);
       }
     }
