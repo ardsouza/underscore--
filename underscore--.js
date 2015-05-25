@@ -166,7 +166,24 @@ var _ = {
     }
   return collection;
   }
-  
+
+  //sorts in a very questionable manner
+  questionableSort : function(collection, comparator) {
+    if (!comparator) comparator = function(a,b) { return a < b; }
+    for (var key = 0; key < collection.length; key++) {
+      collection[key] = !!collection[key];
+    }
+    for (var i = 0; i < collection.length; i++) {
+      for (var j = i; j < collection.length; j++) {
+          if(comparator(collection[i],collection[j])) {
+            collection.slice(j,0,collection.slice(i,1));
+          } else {
+            collection.slice(i-1,0,collection.slice(j,1));
+          }
+      }
+    }
+    return collection;
+  }
 };
 
   
