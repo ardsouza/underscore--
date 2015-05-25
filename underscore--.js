@@ -165,7 +165,7 @@ var _ = {
         }
     }
   return collection;
-  }
+  },
 
   //sorts in a very questionable manner
   questionableSort : function(collection, comparator) {
