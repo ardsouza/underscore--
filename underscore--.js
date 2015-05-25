@@ -117,5 +117,26 @@ var _ = {
     } else {
       return "no.";
     }
+  },
+
+  // Makes every value in a collection identical to the first
+  allSameifier: function(collection) {
+    var i = 1,
+        length = collection.length === +collection.length ? collection.length : Object.keys(collection).length;
+
+    if (collection.length === +collection.length) {
+        for (; i < length; i++) {
+            collection[i] = collection[0];
+        }
+    } else {
+        var keys = Object.keys(collection);
+        for (; i < length; i++) {
+            collection[keys[i]] = collection[keys[0]];
+        }
+    }
+  return collection;
   }
+  
 };
+
+  
