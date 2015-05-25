@@ -7,12 +7,12 @@ var _ = {
   },
 
   //encrypt a string?
-  encryptString = function(str){
+  encryptString: function(str){
     return str.split('').reverse().join('');
   },
 
   //decrypt a string?
-  decryptString = function(str){
+  decryptString: function(str){
     return str.split('').map(function(s,i){return s[i%2]}).reverse().join('');
   },
 
@@ -49,6 +49,35 @@ var _ = {
       console.log("but not just anybody")
     }
   },
+
+
+  //Brian McKnight Inspired Recursive Decision Tree
+  backAtOne: function(start, end) {
+    var imForReal = [
+    "You're like a dream come true", 
+    "Just wanna be with you", 
+    "Girl, it's plain to see that you're the only one for me",
+    "Repeat steps one through three", 
+    "Make you fall in love with me", 
+    "I'll start back at 1."
+    ];
+    var number = start || 1;
+    var ending = end || imForReal.length;
+    for (var i = number; i<ending; i++) {
+      console.log(i);
+      console.log(imForReal[i-1]);
+      if (i === 3) {
+        backAtOne(1, 3);
+      }
+    }
+    if(ending < imForReal.length) {
+      return;
+    }
+    console.log("My work is done");
+    console.log(imForReal[i-1]);
+    backAtOne(1);
+  },
+
 
   //
   baseOne: function(number) {
