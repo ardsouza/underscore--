@@ -1,4 +1,5 @@
 // Create an unsafe reference to the Underscore object for use by all.
+
 var _ = {
 
   // Does nothing
@@ -67,7 +68,7 @@ var _ = {
       console.log(i);
       console.log(imForReal[i-1]);
       if (i === 4) {
-        backAtOne(1, 3);
+        _.backAtOne(1, 3);
       }
     }
     if(ending < imForReal.length) {
@@ -75,7 +76,7 @@ var _ = {
     }
     console.log("My work is done");
     console.log(imForReal[i-1]);
-    backAtOne(1);
+    _.backAtOne(1);
   },
 
 
